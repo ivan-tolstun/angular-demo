@@ -1,2 +1,10 @@
-@import "./theme/custom/header";
+@import "primeng/resources/primeng.css";
+
+@import "theme/theme-custom/variables";
+@import "theme/themes/aura/aura-light/blue/theme";
+// @import "theme/theme-custom/theme";
+
+body {
+  background-color: #ececec;
+}
 

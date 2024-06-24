@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core'
-import {LoginComponent} from "../../pages/login/login.component";
-import {LoginModule} from "../../pages/login/login.module";
+import {LoginPageComponent} from "../../pages/login/login-page.component";
+import {LoginPageModule} from "../../pages/login/login-page.module";
 import {PortalRoutingModule} from "./portal-routing.module";
 
 @NgModule({
@@ -8,7 +8,7 @@ import {PortalRoutingModule} from "./portal-routing.module";
     ],
     imports: [
       PortalRoutingModule,
-      LoginModule
+      LoginPageModule
     ],
     exports: [
     ]

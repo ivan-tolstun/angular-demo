@@ -1,0 +1,91 @@
+.portal {
+  &--sidebar {
+
+    width: 100%;
+    height: 100%;
+
+    .p-sidebar .p-sidebar-header .p-sidebar-close, .p-sidebar .p-sidebar-header .p-sidebar-icon {
+      border: 1px solid $contrastButtonBg;
+      border-radius: 4px;
+    }
+
+    &__control-panel {
+      &__position-control-panel {
+
+        .p-button.p-button.p-button-text, .p-button.p-button.p-button-outlined, .p-button.p-button.p-button-rounded {
+          color: $contrastButtonBg;
+        }
+
+        .p-sidebar .p-sidebar-header .p-sidebar-close, .p-sidebar .p-sidebar-header .p-sidebar-icon {
+          border: 1px solid $contrastButtonBg;
+        }
+
+        .p-splitbutton.p-button-outlined > .p-button {
+          color: $contrastButtonBg;
+        }
+
+        .p-splitbutton.p-button-sm > .p-button {
+          padding-top: calc(var(--font-size) * 0.1275);
+          padding-bottom: calc(var(--font-size) * 0.1275);
+        }
+      }
+    }
+
+    &__content {
+      width: 100%;
+      height: 100%;
+    }
+
+    div.p-component-overlay.p-sidebar-mask {
+      //display: none;
+    }
+
+    .ng-trigger.ng-trigger-panelState.p-sidebar.p-sidebar-active.p-sidebar-right,
+    .ng-trigger.ng-trigger-panelState.p-sidebar.p-sidebar-active.p-sidebar-left,
+    .ng-trigger.ng-trigger-panelState.p-sidebar.p-sidebar-active.p-sidebar-top,
+    .ng-trigger.ng-trigger-panelState.p-sidebar.p-sidebar-active.p-sidebar-bottom,
+    .ng-trigger.ng-trigger-panelState.p-sidebar.p-sidebar-active.p-sidebar-full {
+      overflow: hidden;
+      // resize: both;
+    }
+
+    .p-sidebar {
+      border: 1px solid $contrastButtonBg;
+    }
+
+    & > p-sidebar {
+
+      .p-sidebar-full {
+        top: 5%;
+        left: 5%;
+        height: 94%;
+        width: 90%;
+      }
+
+      .p-sidebar-active {
+      }
+
+      .p-sidebar-content {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .p-sidebar-right {
+        width: 25rem;
+      }
+
+      .p-sidebar-left {
+        width: 25rem;
+      }
+
+      .p-sidebar-bottom {
+        height: 25rem;
+      }
+
+      .p-sidebar-top {
+        height: 25rem;
+      }
+    }
+
+  }
+}

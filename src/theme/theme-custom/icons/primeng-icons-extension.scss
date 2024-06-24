@@ -1,0 +1,171 @@
+// --- ICONS ---
+:root {
+  --portal-icon-url-apartment: url('../../assets/icons/apartment.svg');
+  --portal-icon-url-shield-person: url('../../assets/icons/shield_person.svg');
+  --portal-icon-url-license: url('../../assets/icons/license.svg');
+  --portal-icon-url-settings: url('../../assets/icons/settings.svg');
+  --portal-icon-url-smb-share: url('../../assets/icons/smb_share.svg');
+  --portal-icon-url-account-circle: url('../../assets/icons/account_circle.svg');
+  --portal-icon-url-logout: url('../../assets/icons/logout.svg');
+  --portal-icon-url-language: url('../../assets/icons/language.svg');
+  --portal-icon-url-reply: url('../../assets/icons/reply.svg');
+  --portal-icon-url-lock-reset: url('../../assets/icons/lock_reset.svg');
+  --portal-icon-url-group: url('../../assets/icons/group.svg');
+  --portal-icon-url-supervisor-account: url('../../assets/icons/supervisor_account.svg');
+}
+.pi-custom {
+  width: calc(var(--font-size) * 1.8);
+  height: calc(var(--font-size) * 1.8);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.pi-custom-dark {
+  @extend .pi-custom;
+  background-color: var(--portal-common-text-color-dark);
+}
+.pi-custom-light {
+  @extend .pi-custom;
+  background-color: var(--portal-common-text-color-light);
+}
+.p-panelmenu .p-panelmenu-header .p-panelmenu-header-content {
+  &:not(.p-highlight):not(.p-disabled) > a:hover {
+    .pi-custom-light {
+      background-color: var(--portal-common-text-color-dark);
+    }
+    .pi-custom-dark {
+      background-color: var(--portal-common-text-color-light);
+    }
+  }
+  & > a.p-menuitem-link-active {
+    .pi-custom-light {
+      background-color: var(--portal-common-text-color-dark);
+    }
+    .pi-custom-dark {
+      background-color: var(--portal-common-text-color-light);
+    }
+  }
+}
+.pi-apartment-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-apartment);
+  mask-image: var(--portal-icon-url-apartment);
+}
+.pi-apartment-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-apartment);
+  mask-image: var(--portal-icon-url-apartment);
+}
+.pi-shield-person-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-shield-person);
+  mask-image: var(--portal-icon-url-shield-person);
+}
+.pi-shield-person-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-shield-person);
+  mask-image: var(--portal-icon-url-shield-person);
+}
+.pi-license-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-license);
+  mask-image: var(--portal-icon-url-license);
+}
+.pi-license-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-license);
+  mask-image: var(--portal-icon-url-license);
+}
+.pi-settings-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-settings);
+  mask-image: var(--portal-icon-url-settings);
+}
+.pi-settings-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-settings);
+  mask-image: var(--portal-icon-url-settings);
+}
+.pi-smb-share-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-smb-share);
+  mask-image: var(--portal-icon-url-smb-share);
+}
+.pi-smb-share-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-smb-share);
+  mask-image: var(--portal-icon-url-smb-share);
+}
+.pi-account-circle-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-account-circle);
+  mask-image: var(--portal-icon-url-account-circle);
+}
+.pi-account-circle-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-account-circle);
+  mask-image: var(--portal-icon-url-account-circle);
+}
+.pi-logout-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-logout);
+  mask-image: var(--portal-icon-url-logout);
+}
+.pi-logout-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-logout);
+  mask-image: var(--portal-icon-url-logout);
+}
+.pi-language-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-language);
+  mask-image: var(--portal-icon-url-language);
+}
+.pi-language-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-language);
+  mask-image: var(--portal-icon-url-language);
+}
+.pi-reply-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-reply);
+  mask-image: var(--portal-icon-url-reply);
+}
+.pi-reply-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-reply);
+  mask-image: var(--portal-icon-url-reply);
+}
+.pi-lock-reset-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-lock-reset);
+  mask-image: var(--portal-icon-url-lock-reset);
+}
+.pi-lock-reset-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-lock-reset);
+  mask-image: var(--portal-icon-url-lock-reset);
+}
+.pi-group-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-group);
+  mask-image: var(--portal-icon-url-group);
+}
+.pi-group-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-group);
+  mask-image: var(--portal-icon-url-group);
+}
+.pi-supervisor-account-light {
+  @extend .pi-custom-light;
+  -webkit-mask-image: var(--portal-icon-url-supervisor-account);
+  mask-image: var(--portal-icon-url-supervisor-account);
+}
+.pi-supervisor-account-dark {
+  @extend .pi-custom-dark;
+  -webkit-mask-image: var(--portal-icon-url-supervisor-account);
+  mask-image: var(--portal-icon-url-supervisor-account);
+}
+
+

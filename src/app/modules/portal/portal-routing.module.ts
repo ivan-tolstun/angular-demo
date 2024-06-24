@@ -1,12 +1,12 @@
 import {Inject, NgModule} from '@angular/core'
 import {Routes, RouterModule} from '@angular/router'
-import {LoginComponent} from "../../pages/login/login.component";
+import {LoginPageComponent} from "../../pages/login/login-page.component";
 
 
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginPageComponent
   },
   {
     path: '**',

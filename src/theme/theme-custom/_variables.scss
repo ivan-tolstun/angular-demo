@@ -1,0 +1,83 @@
+@use "sass:meta";
+
+$celltickPrimaryColor: #005295;
+$celltickSuccessColor: #4CBDC6;
+$celltickTextColor: #495057;
+$celltickFontFamily: Poppins;
+
+//reused color variables
+$shade000: #ffffff !default; //surface
+$shade50: #f8fafc !default; //header background
+$shade100: #f1f5f9 !default; //hover background
+$shade200: #e2e8f0 !default; //border, divider
+$shade300: #cbd5e1 !default; //input border
+$shade400: #94a3b8 !default; //input icon
+$shade500: #64748b !default; //text secondary color
+$shade600: #475569 !default; //text color
+$shade700: $celltickTextColor; //text color !!! CHANGED | default #334155 !!!
+$shade800: #1e293b !default;
+$shade900: #0f172a !default;
+$shade950: #020617 !default;
+
+// theme
+$primaryColor: $celltickPrimaryColor !default;  // !!! CHANGED | default #3B82F6 !!!
+$primaryDarkColor: #2563eb !default;
+$primaryDarkerColor: #1D4ED8 !default;
+$primaryTextColor: #ffffff !default;
+
+$highlightBg: #EFF6FF !default;
+$highlightTextColor: $primaryDarkerColor !default;
+$highlightFocusBg: rgba($primaryColor, .24) !default;
+
+$successButtonBg: $celltickSuccessColor;
+
+$successButtonBg: $celltickSuccessColor !default;
+$successButtonBorder: 1px solid $celltickSuccessColor !default;
+$successButtonHoverBg: darken($celltickSuccessColor, 10%) !default;
+$successButtonHoverBorderColor: darken($celltickSuccessColor, 10%) !default;
+$successButtonActiveBg: darken($celltickSuccessColor, 20%) !default;
+$successButtonActiveBorderColor: darken($celltickSuccessColor, 20%) !default;
+
+$contrastButtonBg: $shade950;
+
+//global
+$fontFamily: $celltickFontFamily; // !!! CHANGED | default "Inter var", sans-serif !!!
+$fontSize: 0.7rem; // !!! CHANGED | default 1rem !!!
+$textColor: $shade700;
+$textSecondaryColor: $shade600;
+
+//input field (e.g. inputtext, spinner, inputmask)
+$inputTextFontSize: 0.7rem; // !!! CHANGED | default 1rem !!!
+
+:root {
+  --primary-color: #{meta.inspect($primaryColor)};
+  --success-color: #{meta.inspect($successButtonBg)};
+  --primary-text-color: #{meta.inspect($primaryTextColor)};
+  --highlight-text-color: #{meta.inspect($highlightTextColor)};
+  --font-family: #{meta.inspect($fontFamily)};
+  --font-size: #{meta.inspect($fontSize)};
+}
+
+// --portal-common-text-color-dark --portal-common-text-color-light  var(--primary-text-color)
+:root {
+  --portal-primary-color: #4CAF50; // #4CAF50
+  --portal-secondary-color: #607D8B; // #607D8B
+
+  --portal-common-surface-ground-color: #f8f9fa; // --surface-ground: #f8f9fa;
+  --portal-common-surface-section-color: #ffffff; // --surface-section: #ffffff;
+  --portal-common-surface-card-color: #ffffff; // --surface-card: #ffffff;
+  --portal-common-surface-overlay-color: #ffffff; // --surface-overlay: #ffffff;
+  --portal-common-surface-border-color: #dee2e6; // --surface-border: #dee2e6;
+  --portal-common-surface-data-border-color: #e9ecef; // #e9ecef;
+  --portal-common-surface-content-color: #e9ecef; // #e9ecef;
+  --portal-common-surface-hover-color: #e9ecef; // --surface-hover: #e9ecef;
+  --portal-common-surface-highlight-color: #e9ecef; // #e9ecef;
+
+  --portal-common-text-color-dark: #495057; // --text-color: #495057;
+  --portal-common-text-color-light: #ffffff; // #ffffff
+  --portal-common-text-color-secondary-dark: #6c757d; // --text-color-secondary:#6c757d;
+  --portal-common-text-color-secondary-light: #f8f9fa; // #f8f9fa
+  --portal-common-text-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+

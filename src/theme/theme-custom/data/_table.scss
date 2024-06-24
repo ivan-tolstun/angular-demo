@@ -1,0 +1,66 @@
+.portal {
+  &--table {
+
+    .p-datatable {
+      border: 1px solid var(--portal-common-surface-border-color);
+      border-radius: 4px;
+
+      .p-button.p-button-sm {
+        // padding: 0.1rem;
+      }
+
+      mat-icon.icon-button {
+        // width: 1.5rem;
+        // height: 1.5rem;
+        border: 1px solid var(--portal-common-text-color-dark);
+      }
+
+      button.p-treetable-toggler {
+        i {
+          color: var(--primary-color);
+        }
+      }
+
+      .p-datatable-header {
+        background: darken($primaryTextColor, 3%);
+      }
+
+      .p-datatable-thead > tr {
+        & > th {
+          border-left: 1px solid white;
+          background: $primaryColor;
+          color: white;
+          white-space: nowrap;
+          padding: 0.6rem 1rem;
+          //text-transform: uppercase;
+          &, & > * {
+            font-weight: normal;
+          }
+        }
+      }
+
+      .p-datatable-tbody > tr {
+        & > td {
+
+          border-left: 1px solid var(--portal-common-surface-data-border-color);
+          border-bottom: 1px solid var(--portal-common-surface-data-border-color);
+          // padding: 0.4rem 1rem;
+        }
+
+        &:nth-child(2n) > td:not(.p-frozen-column) {
+          background: darken($primaryTextColor, 3%);
+        }
+
+        & > td:is(.p-frozen-column) {
+          border-right: 1px solid var(--portal-common-surface-data-border-color);
+        }
+
+        &:nth-child(2n) > td:is(.p-frozen-column) {
+          background: darken($primaryTextColor, 3%);
+        }
+      }
+
+    }
+
+  }
+}

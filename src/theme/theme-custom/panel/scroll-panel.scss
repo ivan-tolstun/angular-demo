@@ -1,0 +1,16 @@
+.portal {
+  &--scrollpanel {
+    &--dark {
+      .p-scrollpanel .p-scrollpanel-bar {
+        background: $shade500;
+        // border-color: 1px solid $shade200;
+      }
+    }
+    &--light {
+      .p-scrollpanel .p-scrollpanel-bar {
+        background: $shade200;
+        // border: 1px solid $shade300;
+      }
+    }
+  }
+}

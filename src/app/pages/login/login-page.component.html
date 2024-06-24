@@ -1,9 +1,59 @@
-<div class="w-full h-full flex flex-column justify-content-center">
+<div class="login--page flex flex-column justify-content-center md:justify-content-end">
+  <div class="login--page__content md:h-full md:min-h-full flex flex-nowrap justify-content-center md:justify-content-end align-items-center align-items-stretch">
+    <p-card class="login--page__content__card"
+            styleClass="login--page__content__card md:h-full md:min-h-full flex flex-wrap justify-content-center align-items-center">
 
-  <div class="flex flex-nowrap justify-content-center align-items-center align-items-stretch">
-    <p-card styleClass="">
-      vdfdf
+      <div class="flex flex-column align-items-center justify-content-center">
+
+        <div class="flex flex-column align-items-center justify-content-center">
+          <p-image [src]="utimacoLogoBlack"
+                   alt="Not fount company logo"
+                   [preview]="false"
+                   styleClass="login--page__content__card__logo tilt-in-top-1"
+          />
+          <h1 class="login--page__content__card__title flex flex-column align-items-center justify-content-center">
+            Trust as a Service
+          </h1>
+        </div>
+
+        <form [formGroup]="loginFormGroup"
+              (ngSubmit)="login()"
+              class="p-fluid"
+        >
+
+          <div class="field">
+            <label for="usernameInput">Username</label>
+            <input pInputText
+                   id="usernameInput"
+                   formControlName="userEmail"
+                   type="text"
+                   class="text-base p-2 border-1 border-round appearance-none outline-none focus:border-primary w-full"
+            />
+          </div>
+          <div class="field">
+            <label for="passwordInput">Password</label>
+            <input pInputText
+                   id="passwordInput"
+                   formControlName="userPassword"
+                   type="password"
+                   class="text-base p-2 border-1 border-round appearance-none outline-none focus:border-primary w-full"
+            />
+          </div>
+          <p-button [disabled]="!loginFormCompleted()"
+                    [size]="'large'"
+                    severity="success"
+                    label="Login"
+                    type="submit"
+          ></p-button>
+          <div class="flex justify-content-between align-content-center align-items-center">
+            <div (click)="toForgotPasswordPage()"
+                 class="portal--login__link pr-2"
+            >Forgot password</div>
+          </div>
+        </form>
+
+      </div>
+
     </p-card>
   </div>
-
 </div>

@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // {
+  //   path: "",
+  //   component: MainLayoutComponent,
+  //   children: [
+  //   ]
+  // },
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/login'
+    path: 'authentication',
+    loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule)
   },
   {
-    path: '',
-    loadChildren: () => import('./modules/portal/portal.module').then(m => m.PortalModule)
-  }
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'authentication/login'
+  },
 ]
 
 @NgModule({

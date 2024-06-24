@@ -1,0 +1,40 @@
+.portal {
+  &--public {
+    &--top-menu {
+
+      width: 100%;
+
+      .p-toolbar {
+        padding: 0;
+      }
+
+      .p-toolbar.p-component {
+        background: none;
+        // border-color: var(--portal-success-color);
+        // border-bottom: solid 1px;
+        border: none;
+        border-radius: 0 0 0.75rem 0.75rem;
+        color: var(--portal-info-color);
+      }
+
+      .p-button-info {
+        &:focus {
+          background: none;
+        }
+      }
+
+      .p-button.p-button-outlined {
+        color: var(--portal-info-color);
+      }
+
+      p-sidebar .p-sidebar-full {
+        top: 6.5%;
+        left: 0%;
+        height: 94.5%;
+        width: 100%;
+      }
+
+    }
+
+  }
+}

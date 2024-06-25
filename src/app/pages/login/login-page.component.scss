@@ -13,8 +13,10 @@
 
     &__content {
 
+      background: transparent;
+
       &__card {
-        background: linear-gradient(110deg, #ffffff 0, rgb(236 237 238 / 98%));
+
         height: 100%;
 
         &__title {

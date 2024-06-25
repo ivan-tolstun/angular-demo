@@ -1,17 +1,17 @@
 // --- ICONS ---
 :root {
-  --portal-icon-url-apartment: url('../../assets/icons/apartment.svg');
-  --portal-icon-url-shield-person: url('../../assets/icons/shield_person.svg');
-  --portal-icon-url-license: url('../../assets/icons/license.svg');
-  --portal-icon-url-settings: url('../../assets/icons/settings.svg');
-  --portal-icon-url-smb-share: url('../../assets/icons/smb_share.svg');
-  --portal-icon-url-account-circle: url('../../assets/icons/account_circle.svg');
-  --portal-icon-url-logout: url('../../assets/icons/logout.svg');
-  --portal-icon-url-language: url('../../assets/icons/language.svg');
-  --portal-icon-url-reply: url('../../assets/icons/reply.svg');
-  --portal-icon-url-lock-reset: url('../../assets/icons/lock_reset.svg');
-  --portal-icon-url-group: url('../../assets/icons/group.svg');
-  --portal-icon-url-supervisor-account: url('../../assets/icons/supervisor_account.svg');
+  --portal-icon-url-apartment: url('../../../assets/icons/apartment.svg');
+  --portal-icon-url-shield-person: url('../../../assets/icons/shield_person.svg');
+  --portal-icon-url-license: url('../../../assets/icons/license.svg');
+  --portal-icon-url-settings: url('../../../assets/icons/settings.svg');
+  --portal-icon-url-smb-share: url('../../../assets/icons/smb_share.svg');
+  --portal-icon-url-account-circle: url('../../../assets/icons/account_circle.svg');
+  --portal-icon-url-logout: url('../../../assets/icons/logout.svg');
+  --portal-icon-url-language: url('../../../assets/icons/language.svg');
+  --portal-icon-url-reply: url('../../../assets/icons/reply.svg');
+  --portal-icon-url-lock-reset: url('../../../assets/icons/lock_reset.svg');
+  --portal-icon-url-group: url('../../../assets/icons/group.svg');
+  --portal-icon-url-supervisor-account: url('../../../assets/icons/supervisor_account.svg');
 }
 .pi-custom {
   width: calc(var(--font-size) * 1.8);

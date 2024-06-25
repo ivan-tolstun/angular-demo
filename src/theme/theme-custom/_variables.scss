@@ -49,35 +49,3 @@ $textSecondaryColor: $shade600;
 //input field (e.g. inputtext, spinner, inputmask)
 $inputTextFontSize: 0.7rem; // !!! CHANGED | default 1rem !!!
 
-:root {
-  --primary-color: #{meta.inspect($primaryColor)};
-  --success-color: #{meta.inspect($successButtonBg)};
-  --primary-text-color: #{meta.inspect($primaryTextColor)};
-  --highlight-text-color: #{meta.inspect($highlightTextColor)};
-  --font-family: #{meta.inspect($fontFamily)};
-  --font-size: #{meta.inspect($fontSize)};
-}
-
-// --portal-common-text-color-dark --portal-common-text-color-light  var(--primary-text-color)
-:root {
-  --portal-primary-color: #4CAF50; // #4CAF50
-  --portal-secondary-color: #607D8B; // #607D8B
-
-  --portal-common-surface-ground-color: #f8f9fa; // --surface-ground: #f8f9fa;
-  --portal-common-surface-section-color: #ffffff; // --surface-section: #ffffff;
-  --portal-common-surface-card-color: #ffffff; // --surface-card: #ffffff;
-  --portal-common-surface-overlay-color: #ffffff; // --surface-overlay: #ffffff;
-  --portal-common-surface-border-color: #dee2e6; // --surface-border: #dee2e6;
-  --portal-common-surface-data-border-color: #e9ecef; // #e9ecef;
-  --portal-common-surface-content-color: #e9ecef; // #e9ecef;
-  --portal-common-surface-hover-color: #e9ecef; // --surface-hover: #e9ecef;
-  --portal-common-surface-highlight-color: #e9ecef; // #e9ecef;
-
-  --portal-common-text-color-dark: #495057; // --text-color: #495057;
-  --portal-common-text-color-light: #ffffff; // #ffffff
-  --portal-common-text-color-secondary-dark: #6c757d; // --text-color-secondary:#6c757d;
-  --portal-common-text-color-secondary-light: #f8f9fa; // #f8f9fa
-  --portal-common-text-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-

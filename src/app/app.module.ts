@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {MainLayoutModule} from "./layouts/main-layout/main-layout.module";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
@@ -17,20 +17,19 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
+  bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    TranslateModule.forRoot({ loader: {
+    TranslateModule.forRoot({
+      loader: {
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
-      } }),
-    MainLayoutModule
-  ],
-  providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-  ],
-  bootstrap: [AppComponent]
+      }
+    }),
+    MainLayoutModule], providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    provideHttpClient(withInterceptorsFromDi()),
+  ]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,5 +1,5 @@
 import {computed, Injectable, Signal, signal, WritableSignal} from '@angular/core'
-import {HttpClient, HttpHeaders} from "@angular/common/http"
+import { HttpClient, HttpHeaders } from "@angular/common/http"
 import {map, Observable} from "rxjs"
 import {TokenDto} from "../../dto/authorization/jwt-dto.interface"
 import {JwtHelperService} from "@auth0/angular-jwt"

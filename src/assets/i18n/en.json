@@ -1,0 +1,270 @@
+{
+  "common": {
+    "language": {
+      "en": "English",
+      "de": "German"
+    },
+    "addressType": {
+      "headOffice": "Head office",
+      "office": "Office",
+      "private": "Private"
+    },
+    "phoneNumberType": {
+      "main": "Main phone number",
+      "additional": "Additional phone number"
+    },
+    "userRole": {
+      "rootAdmin": "Superuser",
+      "admin": "Admin User",
+      "contact": "Contact User"
+    },
+    "userStatus": {
+      "unconfirmed": "Unconfirmed",
+      "confirmed": "Confirmed",
+      "forceChangePassword": "Force change password",
+      "archived": "Archived"
+    }
+  },
+  "table": {
+    "globalSearch": "Global search",
+    "actionHeader": "Action",
+    "emptyTable": "Data not found",
+    "dataAccessDenied": "Data access denied"
+  },
+  "address.form": {
+    "country": "Country",
+    "city": "City",
+    "postalCode": "Postal code",
+    "street": "Street",
+    "houseNumber": "House number",
+    "coordinateLat": "Latitude",
+    "coordinateLong": "Longitude",
+    "coordinateLatLong": "Latitude and Longitude",
+    "addressType": "Address Type",
+    "listOfOfficeAddresses": "Office addresses",
+    "listOfPrivateAddresses": "Private addresses",
+    "mapAddressSearch": "Enter your address",
+    "requiredField": "Required field",
+    "optionalField": "Optional field",
+    "addressNotValid": "The entered address is invalid"
+  },
+  "multiple.address.form": {
+    "createNewAddress": "Create a new address",
+    "cancel": "Close",
+    "accept": "Accept"
+  },
+  "phone.form": {
+    "countryNumberCode": "Country number code",
+    "phoneNumper": "Phone number",
+    "sendVerificationNumber": "Send a verification number",
+    "requiredField": "Required field",
+    "optionalField": "Optional field",
+    "verificationCodeSentSuccessfully": "Verification code sent successfully",
+    "verificationCodeSendingFailed": "Verification code sending failed",
+    "phoneNumberVerifiedSuccessfully": "Phone number successfully verified",
+    "phoneNumberVerificationFailed": "You entered the wrong code, please try again",
+    "phoneNumberNotValid": "The entered phone is invalid"
+  },
+  "multiple.phone.form": {
+    "cancel": "Close",
+    "accept": "Accept"
+  },
+  "organization.form": {
+    "organizationName": "System name/ID",
+    "organizationDisplayName": "Display name",
+    "organizationDescription": "Description",
+    "listOfOfficeAddresses": "Office addresses",
+    "requiredField": "Required field",
+    "optionalField": "Optional field"
+  },
+  "organization.creation": {
+    "createOrganization": "Create",
+    "organizationCreatedSuccessfully": "Organization created successfully",
+    "organizationCreateError": "An error occurred when creating an organization"
+  },
+  "organization.update": {
+    "updateOrganization": "Update",
+    "organizationUpdatedSuccessfully": "Organization updated successfully",
+    "organizationUpdateError": "Organization update error"
+  },
+  "organization.table": {
+    "organizationName": "System name/ID",
+    "organizationDisplayName": "Display name",
+    "organizationLicense": "License",
+    "organizationDescription": "Description",
+    "linkToOrganizationPortal": "Link to the company portal",
+    "totalNumberOfSmsSent": "Total number of SMS sent",
+    "totalNumberOfEmailsSent": "Total number of emails sent",
+    "organizationAddresses": "Organization addresses",
+    "adminUsers": "Admin Users",
+    "contactUsers": "Contact Users",
+    "titleOfCreation": "Create a Organization",
+    "titleOfUpdate": "Updating the Organization",
+    "titleOfDelete": "Do you want to delete this organization?",
+    "deleteOrganization": "Delete",
+    "cancelDeletingAnOrganization": "Cancel"
+  },
+  "organization.dataSource.table": {
+    "organizationName": "Organization system name/ID",
+    "serviceName": "System service name",
+    "databaseStatus": "Database status",
+    "databaseHost": "Database host",
+    "databasePort": "Database port",
+    "databaseType": "Database type",
+    "databaseName": "Database name",
+    "databaseUser": "Database user",
+    "databaseUserPassword": "Database user password"
+  },
+  "user.form": {
+    "email": "Email",
+    "confirmationEmail": "Confirm email",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "status": "Status",
+    "roles": "Roles",
+    "languageCode": "Language",
+    "listOfPhoneNumbers": "Phone numbers",
+    "listOfOfficeAddresses": "Office addresses",
+    "listOfPrivateAddresses": "Private addresses",
+    "requiredField": "Required field",
+    "optionalField": "Optional field",
+    "terms&conditionsTitle": "Terms & Conditions",
+    "terms&conditionsContent1": "Your personal data is processed by Utimaco IS GmbH for the purpose of granting you access to the Proof-of-Concept instance for Critical Event Management (CEM) and to perform test activities including to notify you in the event of an alarm by the Proof-of-Concept environment and related activities in support of this project as set out in more detail in the following",
+    "terms&conditionsLinkToProcessingOfPersonalData": "CONSENT TO THE PROCESSING OF PERSONAL DATA",
+    "terms&conditionsContent2": "By checking this box, you consent to the processing of your personal data as described therein. You can revoke your consent for the future at any time vis-à-vis Utimaco.",
+    "terms&conditionsContent3": "Further information on data protection at Utimaco can be found at",
+    "terms&conditionsLinkToPrivacy": "https://utimaco.com/privacy",
+    "acceptTerms&conditions": "I agree to the terms & conditions"
+  },
+  "user.creation": {
+    "createUser": "Create",
+    "organizationLoadingError": "Organization loading error",
+    "userCreationError": "Error during user creation"
+  },
+  "user.update": {
+    "updateUser": "Update",
+    "userLoadingError": "User loading error",
+    "userUpdatedSuccessfully": "User updated successfully",
+    "userUpdateError": "User update error"
+  },
+  "user.reading": {
+    "userLoadingError": "User loading error"
+  },
+  "user.table": {
+    "userEmail": "Email",
+    "userRoles": "Roles",
+    "userStatus": "Status",
+    "userFirstName": "First name",
+    "userLastName": "Last name",
+    "userLanguageCode": "Language",
+    "userPhoneNumbers": "Phone numbers",
+    "userOfficeAddresses": "Office addresses",
+    "userPrivateAddresses": "Private addresses",
+    "titleOfCreation": "Create a User",
+    "titleOfUpdate": "Updating the User",
+    "titleOfDelete": "Do you want to delete this user?",
+    "deleteUser": "Delete",
+    "cancelDeletingAnUser": "Cancel",
+    "userLoadingError": "User loading error",
+    "userDeletingError": "User deletion error"
+  },
+  "public.topMenu": {
+    "linkToAbout": "About Us",
+    "linkToLogin": "Login"
+  },
+  "mainLayout.sidebarMenu": {
+    "portalName": "CEM - Account Management",
+    "linkToOrganizations": "Organizations",
+    "linkToDataSources": "Data sources",
+    "linkToSettings": "Settings",
+    "linkToLicences": "Licences",
+    "linkToOrganization": "Organization",
+    "linkToRootAdminUsers": "Superusers",
+    "linkToAdminUsers": "Admin users",
+    "linkToContactUsers": "Contact users",
+    "linkToCurrentUser": "Your profile",
+    "linkToAuthorizationSettings": "Privacy",
+    "language": "Language",
+    "logout": "Logout",
+    "back": "Back"
+  },
+  "user.registration.page": {
+    "title": "User registration",
+    "successfullyRegisteredAsHtml": "<div>You are successfully registered. Please confirm your email address.</div><div>To do this you need to follow the link we sent to your mailbox.</div>"
+  },
+  "user.forcePasswordChange.page": {
+    "title": "Password change",
+    "description": "Your password has expired, please enter a new password",
+    "currentUserPassword": "Current password",
+    "newUserPassword": "New password",
+    "confirmNewUserPassword": "Confirm password",
+    "updateUserPassword": "Update",
+    "requiredField": "Required field",
+    "optionalField": "Optional field",
+    "userPasswordUpdateError": "Error updating user password",
+    "passwordRuleTitle": "Password requirements",
+    "passwordRule1": "At least one lowercase",
+    "passwordRule2": "At least one uppercase",
+    "passwordRule3": "At least one numeric",
+    "passwordRule4": "Minimum 8 characters"
+  },
+  "user.authorizationSettings.page": {
+    "title": "Password change",
+    "currentUserPassword": "Current password",
+    "newUserPassword": "New password",
+    "confirmNewUserPassword": "Confirm password",
+    "updateUserPassword": "Update",
+    "requiredField": "Required field",
+    "optionalField": "Optional field",
+    "userPasswordUpdateError": "Error updating user password",
+    "passwordRuleTitle": "Password requirements",
+    "passwordRule1": "At least one lowercase",
+    "passwordRule2": "At least one uppercase",
+    "passwordRule3": "At least one numeric",
+    "passwordRule4": "Minimum 8 characters"
+  },
+  "user.forgotPassword.page": {
+    "title": "Forgot password",
+    "description": "A new password will be emailed to you once you have confirmed your identity over the phone.",
+    "userEmail": "Enter you email",
+    "passwordResetSuccessfully": "Password reset successfully and a new password has been sent to your email"
+  },
+  "verification.form": {
+    "title": "Authentication of identity",
+    "sendCode": "Send verification code",
+    "verificationCode": "Please enter the code sent to your phone"
+  },
+  "superusers.page": {
+    "title": "Superusers"
+  },
+  "superuser.page": {
+    "title": "User profile"
+  },
+  "user.page": {
+    "title": "User profile"
+  },
+  "organizationDataSources.page": {
+    "title": "Data sources"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "login": "LOGIN",
+    "forgotPassword": "Forgot password?",
+    "registration": "Registration"
+  },
+  "login.page": {
+    "title": "Account Management"
+  },
+  "about.page": {
+    "title": "About us",
+    "content": "This application and technology involved in its development and implementation are confidential  and are owned by Celltick Technologies under international trade laws. The unauthorized use or  disclosure of any information is strictly prohibited. Celltick Technologies reserves both its  copyrights and trade rights.  BE Build Version 1.0 Release  FE Build 1.20"
+  },
+  "organizations.page": {
+    "title": "Organizations"
+  },
+  "organization.page": {
+    "title": "Organization"
+  }
+}
+

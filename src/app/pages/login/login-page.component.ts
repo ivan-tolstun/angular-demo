@@ -1,5 +1,8 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AuthorizationClientService} from "../../core/api/clients/authorization/authorization-client.service";
+import {TokenDto} from "../../core/api/dto/authorization/jwt-dto.interface";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -10,6 +13,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class LoginPageComponent implements OnInit {
 
   protected readonly utimacoLogoBlack = './assets/logos/utimaco-logo-black.svg'
+  protected dto: TokenDto | undefined = undefined
 
   protected loginFormGroup = new FormGroup({
     userEmail: new FormControl<string>('', [
@@ -22,16 +26,24 @@ export class LoginPageComponent implements OnInit {
     ]),
   })
 
+  constructor(private readonly router: Router,
+              private readonly authClient: AuthorizationClientService) {
+  }
+
   ngOnInit(): void {
   }
 
   protected login(): void {
-    const successLoginHandler = (successfully: boolean) => {
-    }
     const userEmail = this.loginFormGroup.get("userEmail")?.value
     const userPassword = this.loginFormGroup.get("userPassword")?.value
-    if (userEmail != null && userPassword != null) {}
-
+    if (userEmail != null && userPassword != null) {
+      this.authClient
+        .login(userEmail, userPassword)
+        .subscribe(dto => {
+          this.dto = dto
+          this.router.navigate(["main"])
+        })
+    }
   }
 
   protected loginFormCompleted(): boolean {

@@ -1,0 +1,63 @@
+.main-layout {
+
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &__sidenav-area {
+    height: 100%;
+    background: transparent;
+    position: relative;
+  }
+
+  &__content {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mat-drawer-container {
+    background: transparent;
+  }
+
+  &__menu-area {
+    .p-toolbar.p-component {
+      background: var(--portal-top-menu-color);
+      border-radius: 0 0 0.75rem 0.75rem;
+    }
+  }
+
+  &__sidenav-area {
+    mat-sidenav.mat-sidenav {
+      background: transparent;
+    }
+
+    .mat-drawer-container {
+      background: transparent;
+    }
+
+    mat-sidenav-container.mat-sidenav-container {
+      background-color: var(--portal-body-color);
+      width: 100%;
+      height: 100%;
+    }
+
+    am-sidebar-menu, mat-nav-list {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    mat-drawer.mat-drawer, mat-sidenav.mat-drawer {
+      width: max-content;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      border: none;
+      @media only screen and (max-width: 768px) {
+        max-width: calc(var(--font-size) * 8);
+      }
+    }
+  }
+
+}
+

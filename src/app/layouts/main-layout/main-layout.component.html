@@ -1,0 +1,46 @@
+<div class="main-layout w-full h-full flex flex-column overflow-hidden">
+
+  <div class="main-layout__sidenav-area flex flex-nowrap align-items-center justify-content-between p-1 md:p-1 overflow-hidden">
+
+    <div class="flex flex-column align-items-center justify-content-center">
+      <app-main-sidebar-menu class="h-full px-1"></app-main-sidebar-menu>
+    </div>
+
+    <div class="overflow-hidden pr-3">
+      <p-scrollPanel [style]="{ height: '99.2vh', width: '100%' }"
+                     class="portal--scrollpanel--dark"
+                     styleClass="py-2 px-1"
+      >
+        <div class="main-layout__content relative min-h-full">
+          <router-outlet class="min-h-full w-full"></router-outlet>
+          fdg
+        </div>
+      </p-scrollPanel>
+    </div>
+
+  </div>
+
+<!--    <mat-sidenav-container class="main-layout__sidenav-area p-1 md:p-1 overflow-hidden" autosize>-->
+<!--        <mat-sidenav #portalPersonalSidenav-->
+<!--                     [mode]="'side'"-->
+<!--                     opened="true"-->
+<!--                     disableClose="true"-->
+<!--                     [fixedTopGap]="56"-->
+<!--        >-->
+<!--            <mat-nav-list class="flex flex-column align-items-center justify-content-center">-->
+<!--                <app-main-sidebar-menu class="h-full px-1"></app-main-sidebar-menu>-->
+<!--            </mat-nav-list>-->
+<!--        </mat-sidenav>-->
+<!--        <mat-sidenav-content class="overflow-hidden pr-3">-->
+<!--            <p-scrollPanel [style]="{ height: '99.2vh', width: '100%' }"-->
+<!--                           class="portal&#45;&#45;scrollpanel&#45;&#45;dark"-->
+<!--                           styleClass="py-2 px-1"-->
+<!--            >-->
+<!--                <div class="main-layout__content relative min-h-full">-->
+<!--                    <router-outlet class="min-h-full w-full"></router-outlet>-->
+<!--                </div>-->
+<!--            </p-scrollPanel>-->
+<!--        </mat-sidenav-content>-->
+<!--    </mat-sidenav-container>-->
+
+</div>

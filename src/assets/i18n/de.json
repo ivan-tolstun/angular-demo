@@ -1,0 +1,269 @@
+{
+  "common": {
+    "language": {
+      "en": "Englisch",
+      "de": "Deutsch"
+    },
+    "addressType": {
+      "headOffice": "Hauptsitz",
+      "office": "Filiale",
+      "private": "Privat"
+    },
+    "phoneNumberType": {
+      "main": "Haupttelefonnummer",
+      "additional": "Zusätzliche Telefonnummer"
+    },
+    "userRole": {
+      "rootAdmin": "Superuser",
+      "admin": "Administrator Benutzer",
+      "contact": "Kontakt Benutzer"
+    },
+    "userStatus": {
+      "unconfirmed": "Unbestätigt",
+      "confirmed": "Bestätigt",
+      "forceChangePassword": "Passwortänderung erzwingen",
+      "archived": "Archiviert"
+    }
+  },
+  "table": {
+    "globalSearch": "Globale Suche",
+    "actionHeader": "Aktion",
+    "emptyTable": "Daten nicht gefunden",
+    "dataAccessDenied": "Datenzugriff verweigert"
+  },
+  "address.form": {
+    "country": "Land",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "street": "Straße",
+    "houseNumber": "Hausnummer",
+    "coordinateLat": "Breitengrad",
+    "coordinateLong": "Längengrad",
+    "coordinateLatLong": "Breitengrad und Längengrad",
+    "addressType": "Adresstyp",
+    "listOfOfficeAddresses": "Büroadressen",
+    "listOfPrivateAddresses": "Private Adressen",
+    "mapAddressSearch": "Geben Sie Ihre Adresse ein",
+    "requiredField": "Pflichtfeld",
+    "optionalField": "Optionales Feld",
+    "addressNotValid": "Die eingegebene Adresse ist ungültig"
+  },
+  "multiple.address.form": {
+    "createNewAddress": "Neue Adresse erstellen",
+    "cancel": "Abbrechen",
+    "accept": "Akzeptieren"
+  },
+  "phone.form": {
+    "countryNumberCode": "Landesvorwahl",
+    "phoneNumper": "Telefonnummer",
+    "sendVerificationNumber": "Senden einer Kontrollnummer",
+    "requiredField": "Pflichtfeld",
+    "optionalField": "Optionales Feld",
+    "verificationCodeSentSuccessfully": "Bestätigungscode erfolgreich gesendet",
+    "verificationCodeSendingFailed": "Das Senden des Bestätigungscodes ist fehlgeschlagen",
+    "phoneNumberVerifiedSuccessfully": "Rufnummer erfolgreich verifiziert",
+    "phoneNumberVerificationFailed": "Sie haben den falschen Code eingegeben, bitte versuchen Sie es erneut",
+    "phoneNumberNotValid": "Die eingegebene Rufnummer ist ungültig"
+  },
+  "multiple.phone.form": {
+    "cancel": "Abbrechen",
+    "accept": "Akzeptieren"
+  },
+  "organization.form": {
+    "organizationName": "Systemname/ID",
+    "organizationDisplayName": "Anzeigename",
+    "organizationDescription": "Beschreibung",
+    "listOfOfficeAddresses": "Büroadressen",
+    "requiredField": "Pflichtfeld",
+    "optionalField": "Optionales Feld"
+  },
+  "organization.creation": {
+    "createOrganization": "Erstellen",
+    "organizationCreatedSuccessfully": "Organisation erfolgreich erstellt",
+    "organizationCreateError": "Beim Erstellen einer Organisation ist ein Fehler aufgetreten"
+  },
+  "organization.update": {
+    "updateOrganization": "Aktualisieren",
+    "organizationUpdatedSuccessfully": "Organisation erfolgreich aktualisiert",
+    "organizationUpdateError": "Fehler beim Aktualisieren der Organisation"
+  },
+  "organization.table": {
+    "organizationName": "Systemname/ID",
+    "organizationDisplayName": "Anzeigename",
+    "organizationLicense": "Lizenz",
+    "organizationDescription": "Beschreibung",
+    "linkToOrganizationPortal": "Link zum Unternehmensportal",
+    "totalNumberOfSmsSent": "Gesamtzahl der gesendeten SMS",
+    "totalNumberOfEmailsSent": "Gesamtzahl der gesendeten E-Mails",
+    "organizationAddresses": "Firmenadressen",
+    "adminUsers": "Administrator Benutzer",
+    "contactUsers": "Kontakt Benutzer",
+    "titleOfCreation": "Organisation erstellen",
+    "titleOfUpdate": "Aktualisierung der Organisation",
+    "titleOfDelete": "Wollen Sie diese Organisation löschen?",
+    "deleteOrganization": "Löschen",
+    "cancelDeletingAnOrganization": "Abbrechen"
+  },
+  "organization.dataSource.table": {
+    "organizationName": "Organisation systemname/ID",
+    "serviceName": "Service name",
+    "databaseStatus": "Datenbank Status",
+    "databaseHost": "Datenbank Host",
+    "databasePort": "Datenbank Port",
+    "databaseType": "Datenbank Typ",
+    "databaseName": "Datenbank Name",
+    "databaseUser": "Datenbank Benutzer",
+    "databaseUserPassword": "Passwort des Datenbankbenutzers"
+  },
+  "user.form": {
+    "email": "Email",
+    "confirmationEmail": "E-Mail bestätigen",
+    "firstName": "Vornamen",
+    "lastName": "Nachname",
+    "status": "Status",
+    "roles": "Rollen",
+    "languageCode": "Sprache",
+    "listOfPhoneNumbers": "Telefonnummern",
+    "listOfOfficeAddresses": "Büroadressen",
+    "listOfPrivateAddresses": "Private Adressen",
+    "requiredField": "Pflichtfeld",
+    "optionalField": "Optionales Feld",
+    "terms&conditionsTitle": "Bedingungen & Konditionen",
+    "terms&conditionsContent1": "Ihre personenbezogenen Daten werden von Utimaco IS GmbH verarbeitet, um Ihnen Zugang zur Proof-of-Concept-Instanz für Critical Event Management (CEM) zu gewähren und um Testaktivitäten durchzuführen, einschließlich der Benachrichtigung im Falle eines Alarms durch die Proof-of-Concept-Umgebung und damit zusammenhängende Aktivitäten zur Unterstützung dieses Projekts, wie im Folgenden ausführlicher dargelegt",
+    "terms&conditionsLinkToProcessingOfPersonalData": "EINWILLIGUNG IN DIE VERARBEITUNG PERSONENBEZOGENER DATEN",
+    "terms&conditionsContent2": "Mit dem Ankreuzen dieses Feldes erklären Sie sich mit der darin beschriebenen Verarbeitung Ihrer personenbezogenen Daten einverstanden. Sie können Ihre Einwilligung jederzeit für die Zukunft gegenüber Utimaco widerrufen.",
+    "terms&conditionsContent3": "Weitere Informationen zum Datenschutz bei Utimaco finden Sie unter",
+    "terms&conditionsLinkToPrivacy": "https://utimaco.com/privacy",
+    "acceptTerms&conditions": "Ich stimme den Bedingungen und Konditionen zu"
+  },
+  "user.creation": {
+    "createUser": "Erstellen",
+    "organizationLoadingError": "Organisation Ladefehler",
+    "userCreationError": "Fehler bei der Benutzererstellung"
+  },
+  "user.update": {
+    "updateUser": "Aktualisieren",
+    "userLoadingError": "Benutzer Ladefehler",
+    "userUpdatedSuccessfully": "Benutzer erfolgreich aktualisiert",
+    "userUpdateError": "Benutzer Update-Fehler"
+  },
+  "user.reading": {
+    "userLoadingError": "Benutzer Ladefehler"
+  },
+  "user.table": {
+    "userEmail": "Email",
+    "userRoles": "Rollen",
+    "userStatus": "Status",
+    "userFirstName": "Vornamen",
+    "userLastName": "Nachname",
+    "userLanguageCode": "Sprache",
+    "userPhoneNumbers": "Telefonnummern",
+    "userOfficeAddresses": "Büroadressen",
+    "userPrivateAddresses": "Private Adressen",
+    "titleOfCreation": "Benutzer erstellen",
+    "titleOfUpdate": "Aktualisierung der Benutzer",
+    "titleOfDelete": "Wollen Sie diesen Benutzer löschen?",
+    "deleteUser": "Löschen",
+    "cancelDeletingAnUser": "Abbrechen",
+    "userLoadingError": "Benutzer Ladefehler",
+    "userDeletingError": "Benutzer Löschfehler"
+  },
+  "public.topMenu": {
+    "linkToAbout": "Über uns",
+    "linkToLogin": "Anmeldung"
+  },
+  "mainLayout.sidebarMenu": {
+    "portalName": "CEM - Account Management",
+    "linkToOrganizations": "Unternehmen",
+    "linkToDataSources": "Datenquellen",
+    "linkToSettings": "Einstellungen",
+    "linkToLicences": "Lizenzen",
+    "linkToOrganization": "Das Unternehmen",
+    "linkToRootAdminUsers": "Superusers",
+    "linkToAdminUsers": "Admin Benutzer",
+    "linkToContactUsers": "Kontakt Benutzer",
+    "linkToCurrentUser": "Ihr Profil",
+    "linkToAuthorizationSettings": "Privatsphäre",
+    "language": "Sprache",
+    "logout": "Abmeldung",
+    "back": "Zurück"
+  },
+  "user.registration.page": {
+    "title": "Benutzerregistrierung",
+    "successfullyRegisteredAsHtml": "<div>Sie sind erfolgreich registriert. Bitte bestätigen Sie Ihre E-Mail Adresse.</div><div>Dazu müssen Sie dem Link folgen, den wir Ihnen in Ihre Mailbox geschickt haben.</div>"
+  },
+  "user.forcePasswordChange.page": {
+    "title": "Passwort ändern",
+    "description": "Ihr Passwort ist abgelaufen, bitte geben Sie ein neues Passwort ein",
+    "currentUserPassword": "Aktuelles Passwort",
+    "newUserPassword": "Neues Passwort",
+    "confirmNewUserPassword": "Neues Passwort bestätigen",
+    "updateUserPassword": "Aktualisieren",
+    "requiredField": "Pflichtfeld",
+    "optionalField": "Optionales Feld",
+    "userPasswordUpdateError": "Fehler beim Aktualisieren des Benutzerkennworts",
+    "passwordRuleTitle": "Passwort-Anforderungen",
+    "passwordRule1": "Mindestens ein Kleinbuchstabe",
+    "passwordRule2": "Mindestens eine Großbuchstabe",
+    "passwordRule3": "Mindestens ein numerischer Wert",
+    "passwordRule4": "Minimum 8 Zeichen"
+  },
+  "user.authorizationSettings.page": {
+    "title": "Passwort ändern",
+    "currentUserPassword": "Aktuelles Passwort",
+    "newUserPassword": "Neues Passwort",
+    "confirmNewUserPassword": "Neues Passwort bestätigen",
+    "updateUserPassword": "Aktualisieren",
+    "requiredField": "Pflichtfeld",
+    "optionalField": "Optionales Feld",
+    "userPasswordUpdateError": "Fehler beim Aktualisieren des Benutzerkennworts",
+    "passwordRuleTitle": "Passwort-Anforderungen",
+    "passwordRule1": "Mindestens ein Kleinbuchstabe",
+    "passwordRule2": "Mindestens eine Großbuchstabe",
+    "passwordRule3": "Mindestens ein numerischer Wert",
+    "passwordRule4": "Minimum 8 Zeichen"
+  },
+  "user.forgotPassword.page": {
+    "title": "Passwort vergessen",
+    "description": "Ein neues Passwort wird Ihnen per E-Mail zugeschickt, sobald Sie Ihre Identität telefonisch bestätigt haben.",
+    "userEmail": "Geben Sie Ihre E-Mail ein",
+    "passwordResetSuccessfully": "Das Passwort wurde erfolgreich zurückgesetzt und ein neues Passwort wurde an Ihre E-Mail gesendet"
+  },
+  "verification.form": {
+    "title": "Authentifizierung der Identität",
+    "sendCode": "Verifizierungscode senden",
+    "verificationCode": "Bitte geben Sie den an Ihr Handy gesendeten Code ein"
+  },
+  "superusers.page": {
+    "title": "Superusers"
+  },
+  "superuser.page": {
+    "title": "Benutzerprofil"
+  },
+  "user.page": {
+    "title": "Benutzerprofil"
+  },
+  "organizationDataSources.page": {
+    "title": "Datenquellen"
+  },
+  "login": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "login": "LOGIN",
+    "forgotPassword": "Passwort vergessen?",
+    "registration": "Registrierung"
+  },
+  "login.page": {
+    "title": "Account Management"
+  },
+  "about.page": {
+    "title": "Über uns",
+    "content": "Diese Anwendung und Technologie, die an ihrer Entwicklung und Implementierung beteiligt sind, sind vertraulich\n   und sind nach internationalen Handelsgesetzen Eigentum von Celltick Technologies. Die unbefugte Nutzung bzw\n   die Weitergabe von Informationen ist strengstens untersagt. Celltick Technologies behält sich beides vor\n   Urheberrechte und Handelsrechte.\n   BE Build-Version 1.0-Release\n   FE-Build 1.20"
+  },
+  "organizations.page": {
+    "title": "Organisationen"
+  },
+  "organization.page": {
+    "title": "Organisation"
+  }
+}

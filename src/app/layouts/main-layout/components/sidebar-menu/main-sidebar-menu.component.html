@@ -1,0 +1,35 @@
+<div class="main-layout--sidebar-menu flex flex-wrap align-content-between align-items-center justify-content-center">
+
+    <div class="main-layout--sidebar-menu__logo flex flex-column align-content-center align-items-start">
+        <p-image [src]="logoPath"
+                 alt="Not fount company logo"
+                 [preview]="false"
+                 class="main-layout--sidebar-menu__logo__image tilt-in-top-1"
+        />
+        <div class="main-layout--sidebar-menu__logo__text">
+            {{"mainLayout.sidebarMenu.portalName" | translate}}
+        </div>
+    </div>
+    <p-scrollPanel [style]="{ height: '60vh' }"
+                   class="portal--scrollpanel--light w-full flex flex-wrap align-content-center align-items-center justify-content-center mt-5 px-2"
+    >
+        <p-panelMenu [model]="mainSubmenuItems"
+                     [multiple]="false"
+                     class="main-layout--sidebar-menu__main-submenu"
+        >
+        </p-panelMenu>
+    </p-scrollPanel>
+    <div class="col-12 pb-0 pl-0 pr-0">
+        <p-panelMenu [model]="settingsSubmenuItems"
+                     [multiple]="true"
+                     class="main-layout--sidebar-menu__settings-submenu"
+        >
+        </p-panelMenu>
+        <p-tieredMenu #languageSubmenu
+                      [model]="languageSubmenuItems"
+                      [popup]="true"
+                      class="main-layout--sidebar-menu__language-submenu"
+                      styleClass="w-full"
+        ></p-tieredMenu>
+    </div>
+</div>

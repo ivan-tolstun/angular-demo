@@ -14,20 +14,28 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
 }
 
-function initializeKeycloak(keycloak: KeycloakService) {
+export function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
-    keycloak.init({
-      config: keycloakConfig,
-      initOptions: {
-        onLoad: 'login-required',
-        checkLoginIframe: false
-        //onLoad: 'check-sso',
-        //silentCheckSsoRedirectUri:
-        //window.location.origin + '/assets/silent-check-sso.html',
-        //checkLoginIframe: false,
-        //redirectUri: keycloakConfig.redirectUri
-      }
-    });
+    keycloak
+      .init({
+        config: keycloakConfig,
+        initOptions: {
+          onLoad: 'login-required',
+          checkLoginIframe: false
+        },
+        bearerExcludedUrls: []
+      })
+      .then(authenticated => {
+        if (authenticated) {
+          // Set up automatic token refresh
+          keycloak.keycloakEvents$.subscribe({
+            next: (event) => {
+              if (event.type.toString() === "OnTokenExpired")
+                keycloak.updateToken(30).catch(() => { keycloak.login() })
+            }
+          })
+        }
+      })
 }
 
 @NgModule({

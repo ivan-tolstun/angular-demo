@@ -9,6 +9,7 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader"
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core"
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular"
 import {keycloakConfig} from "./keycloak.config"
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -23,13 +24,14 @@ export function initializeKeycloak(keycloak: KeycloakService) {
           onLoad: 'login-required',
           checkLoginIframe: false
         },
+        // Specify URLs that don't require tokens
         bearerExcludedUrls: []
       })
       .then(authenticated => {
         if (authenticated) {
-          // Set up automatic token refresh
           keycloak.keycloakEvents$.subscribe({
             next: (event) => {
+              // Set up automatic token refresh
               if (event.type.toString() === "OnTokenExpired")
                 keycloak.updateToken(30).catch(() => { keycloak.login() })
             }
@@ -54,6 +56,7 @@ export function initializeKeycloak(keycloak: KeycloakService) {
       }
     }),
     MainLayoutModule,
+    BrowserAnimationsModule,
     KeycloakAngularModule,
   ],
   providers: [

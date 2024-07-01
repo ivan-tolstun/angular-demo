@@ -19,6 +19,8 @@ import {PanelMenuModule} from "primeng/panelmenu";
 import {TieredMenuModule} from "primeng/tieredmenu";
 import {CardModule} from "primeng/card";
 import {TranslateModule} from "@ngx-translate/core";
+import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
+import {MatNavList} from "@angular/material/list";
 
 @NgModule({
     declarations: [
@@ -45,6 +47,10 @@ import {TranslateModule} from "@ngx-translate/core";
     TieredMenuModule,
     CardModule,
     TranslateModule,
+    MatSidenavContainer,
+    MatSidenavContent,
+    MatSidenav,
+    MatNavList,
   ]
 })
 export class MainLayoutModule {}

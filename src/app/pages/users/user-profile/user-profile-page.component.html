@@ -1,0 +1,25 @@
+<div class="user-profile--page">
+  <p-card [@swingInTop]
+          styleClass="min-h-full w-full"
+  >
+
+    <h1 class="portal--title--1__with-border col-12">
+      <p-chip styleClass="pl-0 pr-3">
+        <span class="bg-primary border-circle w-2rem h-2rem flex align-items-center justify-content-center">
+          <i class="pi pi-fw pi-account-circle-light"></i>
+        </span>
+        <span class="ml-2 font-medium text-xl">
+          {{ 'user.page.title' | translate }}
+        </span>
+      </p-chip>
+    </h1>
+
+    @if (userEmail != null && updateOptions != null) {
+      <app-user-update [userEmail]="userEmail"
+                       [userOptions]="updateOptions"
+                       (userChange)="userEmail = undefined; userEmail = $event.email;"
+      ></app-user-update>
+    }
+
+  </p-card>
+</div>

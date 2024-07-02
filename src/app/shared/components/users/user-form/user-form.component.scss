@@ -1,0 +1,10 @@
+user {
+  &--form {
+
+    input::placeholder {
+      color: var(--portal-common-text-color-dark);
+      opacity: 1;
+    }
+
+  }
+}

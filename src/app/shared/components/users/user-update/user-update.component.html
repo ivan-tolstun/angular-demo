@@ -1,0 +1,26 @@
+<div class="user--update">
+
+  <app-user-form [(email)]="email"
+                 [(status)]="status"
+                 [(roles)]="roles"
+                 [(firstName)]="firstName"
+                 [(lastName)]="lastName"
+                 [(languageCode)]="languageCode"
+                 [userOptions]="userOptions"
+                 (whenUserValid)="isFormValid = true"
+                 (whenUserInvalid)="isFormValid = false"
+                 [dataLoaded]="true"
+                 [mobileStyle]="mobileStyle"
+  ></app-user-form>
+
+  <div class="w-full flex justify-content-end flex-wrap">
+    <p-button [disabled]="!dataLoaded || !isFormValid || !isUserChanged()"
+              (click)="updateUser()"
+              label="{{'user.update.updateUser' | translate}}"
+              icon="pi pi-check"
+              styleClass="mt-1 p-button-success"
+              type="button"
+    ></p-button>
+  </div>
+
+</div>

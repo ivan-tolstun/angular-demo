@@ -10,6 +10,7 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core"
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular"
 import {keycloakConfig} from "./keycloak.config"
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastModule} from "primeng/toast";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -58,6 +59,7 @@ export function initializeKeycloak(keycloak: KeycloakService) {
     MainLayoutModule,
     BrowserAnimationsModule,
     KeycloakAngularModule,
+    ToastModule,
   ],
   providers: [
     {

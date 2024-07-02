@@ -23,27 +23,27 @@
 }
 .pi-custom-dark {
   @extend .pi-custom;
-  background-color: var(--portal-common-text-color-dark);
+  background-color: var(--text-color);
 }
 .pi-custom-light {
   @extend .pi-custom;
-  background-color: var(--portal-common-text-color-light);
+  background-color: var(--primary-text-color);
 }
 .p-panelmenu .p-panelmenu-header .p-panelmenu-header-content {
   &:not(.p-highlight):not(.p-disabled) > a:hover {
     .pi-custom-light {
-      background-color: var(--portal-common-text-color-dark);
+      background-color: var(--text-color);
     }
     .pi-custom-dark {
-      background-color: var(--portal-common-text-color-light);
+      background-color: var(--primary-text-color);
     }
   }
   & > a.p-menuitem-link-active {
     .pi-custom-light {
-      background-color: var(--portal-common-text-color-dark);
+      background-color: var(--text-color);
     }
     .pi-custom-dark {
-      background-color: var(--portal-common-text-color-light);
+      background-color: var(--primary-text-color);
     }
   }
 }

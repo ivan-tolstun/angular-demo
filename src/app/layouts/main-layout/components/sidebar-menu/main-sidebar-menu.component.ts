@@ -5,6 +5,7 @@ import {MenuItemCommandEvent} from "primeng/api/menuitem";
 import {StaticImagePath} from "../../../../core/constants/static-image-path";
 import {TranslateService} from "@ngx-translate/core";
 import {DomSanitizer} from "@angular/platform-browser";
+import {KeycloakService} from "keycloak-angular";
 
 @Component({
   selector: 'app-main-sidebar-menu',
@@ -23,7 +24,8 @@ export class MainSidebarMenuComponent implements OnInit {
   protected languageSubmenuItems: MenuItem[] = []
 
   constructor(private readonly domSanitizer: DomSanitizer,
-              private readonly translateService: TranslateService) {
+              private readonly translateService: TranslateService,
+              private readonly KeycloakService: KeycloakService) {
   }
 
   ngOnInit(): void {
@@ -67,7 +69,7 @@ export class MainSidebarMenuComponent implements OnInit {
     const logoutLink = {
       label: this.translateService.instant("mainLayout.sidebarMenu.logout"),
       icon: "pi pi-fw pi-logout-light",
-      command: () => { /* TODO: logout */ },
+      command: () => { this.KeycloakService.logout() },
       routerLinkActiveOptions: {exact: true},
     }
     settingsSubmenu.push(

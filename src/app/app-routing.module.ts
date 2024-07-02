@@ -9,19 +9,20 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'main'
+    redirectTo: 'main/user-profile'
   },
   {
     path: "main",
     canActivate: [CustomKeycloakAuthGuard], // [...,GuardService.authenticated,...]
     component: MainLayoutComponent,
     children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/main/main.module').then(m => m.MainModule)
+
+      }
     ]
   },
-  // {
-  //   path: 'authentication',
-  //   loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule)
-  // },
   {
     path: '**',
     pathMatch: 'full',

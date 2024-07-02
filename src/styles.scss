@@ -1,6 +1,10 @@
-@import "theme/theme-custom/variables";
-@import "theme/themes/aura/aura-light/blue/theme";
-@import "theme/theme-custom/theme";
+@use "sass:meta";
+
+@import "primeicons/primeicons.css";
+@import './theme/theme-custom/fonts';
+@import "./theme/theme-custom/variables";
+@import "./theme/themes/aura/aura-light/blue/theme";
+@import "./theme/theme-custom/theme";
 
 body {
   padding: 0;

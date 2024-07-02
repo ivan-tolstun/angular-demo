@@ -49,3 +49,12 @@ $textSecondaryColor: $shade600;
 //input field (e.g. inputtext, spinner, inputmask)
 $inputTextFontSize: 0.7rem; // !!! CHANGED | default 1rem !!!
 
+:root {
+  --primary-color: #{meta.inspect($primaryColor)};
+  --success-color: #{meta.inspect($successButtonBg)};
+  --primary-text-color: #{meta.inspect($primaryTextColor)};
+  --highlight-text-color: #{meta.inspect($highlightTextColor)};
+  --font-family: #{meta.inspect($fontFamily)};
+  --font-size: #{meta.inspect($fontSize)};
+  --text-color: #{meta.inspect($textColor)};
+}

@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthorizationClientService} from "../../core/api/clients/authorization/authorization-client.service";
-import {TokenDto} from "../../core/api/dto/authorization/jwt-dto.interface";
+import {TokenDto} from "../../core/api/dto/authorization/jwt-dto";
 import {Router} from "@angular/router";
 
 @Component({

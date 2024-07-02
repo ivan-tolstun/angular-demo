@@ -1,17 +1,25 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import {MessageService} from "primeng/api";
+import {GlobalMessageService} from "./core/services/global-message-service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [MessageService]
 })
 export class AppComponent implements OnInit {
 
-  constructor(private readonly translateService: TranslateService) {
+  protected readonly globalToastKey = "global-toast"
+
+  constructor(private readonly messageService: MessageService,
+              private readonly translateService: TranslateService,
+              private readonly globalMessageService: GlobalMessageService) {
   }
 
   ngOnInit(): void {
+    this.globalMessageService.init(this.messageService, this.globalToastKey)
     this.initLanguageOnPortal()
   }
 

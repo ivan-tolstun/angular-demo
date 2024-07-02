@@ -1,3 +1,3 @@
 export interface NumberOfRowsDtoV1 {
-    total: number;
+  total: number;
 }

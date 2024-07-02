@@ -1,4 +1,4 @@
 export enum LanguageDto {
-    English = 'EN',
-    German = 'DE'
+  English = 'EN',
+  German = 'DE'
 }

@@ -1,211 +1,211 @@
 <div class="user--form w-full">
-    <div class="flex justify-content-center">
-        <div class="w-full min-h-full">
+  <div class="flex justify-content-center">
+    <div class="w-full min-h-full">
 
-            <div class="p-fluid grid formgrid">
-                <!-- - - - INPUT: email - - - -->
-                <div *ngIf="!userOptions.hideEmail() && dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputEmail">{{'user.form.email' | translate}}</label>
-                    <input [(ngModel)]="email"
-                           [readonly]="userOptions.readonlyEmail()"
-                           [disabled]="userOptions.readonlyEmail()"
-                           [required]="userOptions.requiredEmail()"
-                           type="text"
-                           id="inputEmail"
-                           pInputText>
-                    <small *ngIf="!validateEmail()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-                <!-- - - - LOADING PROCESS: email - - - -->
-                <div *ngIf="!userOptions.hideEmail() && !dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label>{{'user.form.email' | translate}}</label>
-                    <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                                width="100%"
-                                height="2.5rem"
-                                styleClass="mb-2"
-                    ></p-skeleton>
-                </div>
+      <div class="p-fluid grid formgrid">
+        <!-- - - - INPUT: email - - - -->
+        <div *ngIf="!userOptions.hideEmail() && dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputEmail">{{ 'user.form.email' | translate }}</label>
+          <input [(ngModel)]="email"
+                 [readonly]="userOptions.readonlyEmail()"
+                 [disabled]="userOptions.readonlyEmail()"
+                 [required]="userOptions.requiredEmail()"
+                 type="text"
+                 id="inputEmail"
+                 pInputText>
+          <small *ngIf="!validateEmail()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
+        </div>
+        <!-- - - - LOADING PROCESS: email - - - -->
+        <div *ngIf="!userOptions.hideEmail() && !dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label>{{ 'user.form.email' | translate }}</label>
+          <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+                      width="100%"
+                      height="2.5rem"
+                      styleClass="mb-2"
+          ></p-skeleton>
+        </div>
 
-                <!-- - - - INPUT: confirm email - - - -->
-                <div *ngIf="!userOptions.hideEmail()
+        <!-- - - - INPUT: confirm email - - - -->
+        <div *ngIf="!userOptions.hideEmail()
                 && email != null && email.length > 0
                 && !userOptions.readonlyEmail()
                 && dataLoaded"
-                     [class]="(mobileStyle) ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputConfirmEmail">{{'user.form.confirmationEmail' | translate}}</label>
-                    <input [(ngModel)]="confirmEmail"
-                           [required]="true"
-                           [disabled]="email === confirmEmail"
-                           type="text"
-                           id="inputConfirmEmail"
-                           pInputText>
-                    <small *ngIf="!validateConfirmEmail()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-
-                <!-- - - - INPUT: first name - - - -->
-                <div *ngIf="!userOptions.hideFirstName() && dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputFirstName">{{"user.form.firstName" | translate}}</label>
-                    <input [(ngModel)]="firstName"
-                           [readonly]="userOptions.readonlyFirstName()"
-                           [required]="userOptions.requiredFirstName()"
-                           type="text"
-                           id="inputFirstName"
-                           pInputText
-                           class="surface-overlay p-2 w-full">
-                    <small *ngIf="!validateFirstName()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-                <!-- - - - LOADING PROCESS: first name - - - -->
-                <div *ngIf="!userOptions.hideFirstName() && !dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label>{{"user.form.firstName" | translate}}</label>
-                    <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                                width="100%"
-                                height="2.5rem"
-                                styleClass="mb-2"
-                    ></p-skeleton>
-                </div>
-
-                <!-- - - - INPUT: last name - - - -->
-                <div *ngIf="!userOptions.hideLastName() && dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputLastName">{{"user.form.lastName" | translate}}</label>
-                    <input [(ngModel)]="lastName"
-                           [readonly]="userOptions.readonlyLastName()"
-                           [required]="userOptions.requiredLastName()"
-                           type="text"
-                           id="inputLastName"
-                           pInputText
-                           class="surface-overlay p-2 w-full">
-                    <small *ngIf="!validateLastName()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-                <!-- - - - LOADING PROCESS: last name - - - -->
-                <div *ngIf="!userOptions.hideLastName() && !dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label>{{"user.form.lastName" | translate}}</label>
-                    <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                                width="100%"
-                                height="2.5rem"
-                                styleClass="mb-2"
-                    ></p-skeleton>
-                </div>
-            </div>
-
-            <div class="p-fluid grid formgrid">
-                <!-- - - - INPUT: status - - - -->
-                <div *ngIf="!userOptions.hideStatus() && dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputStatus">{{"user.form.status" | translate}}</label>
-                    <p-dropdown *ngIf="allowedUserStatusesWithTranslation$ != null"
-                                [options]="allowedUserStatusesWithTranslation$()"
-                                [(ngModel)]="status"
-                                [readonly]="userOptions.readonlyStatus()"
-                                [disabled]="userOptions.readonlyStatus()"
-                                [filter]="false"
-                                [autoDisplayFirst]="false"
-                                optionLabel="name"
-                                optionValue="code"
-                                id="inputStatus"
-                                class="ng-dirty"
-                    ></p-dropdown>
-                    <small *ngIf="!validateStatus()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-                <!-- - - - LOADING PROCESS: status - - - -->
-                <div *ngIf="!userOptions.hideStatus() && !dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label>{{"user.form.status" | translate}}</label>
-                    <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                                width="100%"
-                                height="2.5rem"
-                                styleClass="mb-2"
-                    ></p-skeleton>
-                </div>
-
-                <!-- - - - INPUT: roles - - - -->
-                <div *ngIf="!userOptions.hideRoles() && dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputRoles">{{"user.form.roles" | translate}}</label>
-                    <p-multiSelect *ngIf="allowedUserRolesWithTranslation$ != null"
-                                   [options]="allowedUserRolesWithTranslation$()"
-                                   [(ngModel)]="roles"
-                                   [readonly]="userOptions.readonlyRoles()"
-                                   [disabled]="userOptions.readonlyRoles()"
-                                   [filter]="false"
-                                   optionLabel="name"
-                                   optionValue="code"
-                                   id="inputRoles"
-                                   class="ng-dirty"
-                    ></p-multiSelect>
-                    <small *ngIf="!validateRoles()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-                <!-- - - - LOADING PROCESS: roles - - - -->
-                <div *ngIf="!userOptions.hideRoles() && !dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label>{{"user.form.roles" | translate}}</label>
-                    <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                                width="100%"
-                                height="2.5rem"
-                                styleClass="mb-2"
-                    ></p-skeleton>
-                </div>
-
-                <!-- - - - INPUT: language code - - - -->
-                <div *ngIf="!userOptions.hideLanguageCode() && dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label for="inputLanguageCode">{{"user.form.languageCode" | translate}}</label>
-                    <p-dropdown *ngIf="allowedLanguagesWithTranslation$ != null"
-                                [options]="allowedLanguagesWithTranslation$()"
-                                [(ngModel)]="languageCode"
-                                [readonly]="userOptions.readonlyLanguageCode()"
-                                [filter]="false"
-                                [autoDisplayFirst]="false"
-                                optionLabel="name"
-                                optionValue="code"
-                                id="inputLanguageCode"
-                                class="ng-dirty"
-                    ></p-dropdown>
-                    <small *ngIf="!validateLanguageCode()"
-                           style="color: red;"
-                    >{{'user.form.requiredField' | translate}}</small>
-                </div>
-                <!-- - - - LOADING PROCESS: language code - - - -->
-                <div *ngIf="!userOptions.hideLanguageCode() && !dataLoaded"
-                     [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                >
-                    <label>{{"user.form.languageCode" | translate}}</label>
-                    <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
-                                width="100%"
-                                height="2.5rem"
-                                styleClass="mb-2"
-                    ></p-skeleton>
-                </div>
-            </div>
-
+             [class]="(mobileStyle) ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputConfirmEmail">{{ 'user.form.confirmationEmail' | translate }}</label>
+          <input [(ngModel)]="confirmEmail"
+                 [required]="true"
+                 [disabled]="email === confirmEmail"
+                 type="text"
+                 id="inputConfirmEmail"
+                 pInputText>
+          <small *ngIf="!validateConfirmEmail()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
         </div>
+
+        <!-- - - - INPUT: first name - - - -->
+        <div *ngIf="!userOptions.hideFirstName() && dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputFirstName">{{ "user.form.firstName" | translate }}</label>
+          <input [(ngModel)]="firstName"
+                 [readonly]="userOptions.readonlyFirstName()"
+                 [required]="userOptions.requiredFirstName()"
+                 type="text"
+                 id="inputFirstName"
+                 pInputText
+                 class="surface-overlay p-2 w-full">
+          <small *ngIf="!validateFirstName()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
+        </div>
+        <!-- - - - LOADING PROCESS: first name - - - -->
+        <div *ngIf="!userOptions.hideFirstName() && !dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label>{{ "user.form.firstName" | translate }}</label>
+          <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+                      width="100%"
+                      height="2.5rem"
+                      styleClass="mb-2"
+          ></p-skeleton>
+        </div>
+
+        <!-- - - - INPUT: last name - - - -->
+        <div *ngIf="!userOptions.hideLastName() && dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputLastName">{{ "user.form.lastName" | translate }}</label>
+          <input [(ngModel)]="lastName"
+                 [readonly]="userOptions.readonlyLastName()"
+                 [required]="userOptions.requiredLastName()"
+                 type="text"
+                 id="inputLastName"
+                 pInputText
+                 class="surface-overlay p-2 w-full">
+          <small *ngIf="!validateLastName()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
+        </div>
+        <!-- - - - LOADING PROCESS: last name - - - -->
+        <div *ngIf="!userOptions.hideLastName() && !dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label>{{ "user.form.lastName" | translate }}</label>
+          <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+                      width="100%"
+                      height="2.5rem"
+                      styleClass="mb-2"
+          ></p-skeleton>
+        </div>
+      </div>
+
+      <div class="p-fluid grid formgrid">
+        <!-- - - - INPUT: status - - - -->
+        <div *ngIf="!userOptions.hideStatus() && dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputStatus">{{ "user.form.status" | translate }}</label>
+          <p-dropdown *ngIf="allowedUserStatusesWithTranslation$ != null"
+                      [options]="allowedUserStatusesWithTranslation$()"
+                      [(ngModel)]="status"
+                      [readonly]="userOptions.readonlyStatus()"
+                      [disabled]="userOptions.readonlyStatus()"
+                      [filter]="false"
+                      [autoDisplayFirst]="false"
+                      optionLabel="name"
+                      optionValue="code"
+                      id="inputStatus"
+                      class="ng-dirty"
+          ></p-dropdown>
+          <small *ngIf="!validateStatus()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
+        </div>
+        <!-- - - - LOADING PROCESS: status - - - -->
+        <div *ngIf="!userOptions.hideStatus() && !dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label>{{ "user.form.status" | translate }}</label>
+          <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+                      width="100%"
+                      height="2.5rem"
+                      styleClass="mb-2"
+          ></p-skeleton>
+        </div>
+
+        <!-- - - - INPUT: roles - - - -->
+        <div *ngIf="!userOptions.hideRoles() && dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputRoles">{{ "user.form.roles" | translate }}</label>
+          <p-multiSelect *ngIf="allowedUserRolesWithTranslation$ != null"
+                         [options]="allowedUserRolesWithTranslation$()"
+                         [(ngModel)]="roles"
+                         [readonly]="userOptions.readonlyRoles()"
+                         [disabled]="userOptions.readonlyRoles()"
+                         [filter]="false"
+                         optionLabel="name"
+                         optionValue="code"
+                         id="inputRoles"
+                         class="ng-dirty"
+          ></p-multiSelect>
+          <small *ngIf="!validateRoles()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
+        </div>
+        <!-- - - - LOADING PROCESS: roles - - - -->
+        <div *ngIf="!userOptions.hideRoles() && !dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label>{{ "user.form.roles" | translate }}</label>
+          <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+                      width="100%"
+                      height="2.5rem"
+                      styleClass="mb-2"
+          ></p-skeleton>
+        </div>
+
+        <!-- - - - INPUT: language code - - - -->
+        <div *ngIf="!userOptions.hideLanguageCode() && dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label for="inputLanguageCode">{{ "user.form.languageCode" | translate }}</label>
+          <p-dropdown *ngIf="allowedLanguagesWithTranslation$ != null"
+                      [options]="allowedLanguagesWithTranslation$()"
+                      [(ngModel)]="languageCode"
+                      [readonly]="userOptions.readonlyLanguageCode()"
+                      [filter]="false"
+                      [autoDisplayFirst]="false"
+                      optionLabel="name"
+                      optionValue="code"
+                      id="inputLanguageCode"
+                      class="ng-dirty"
+          ></p-dropdown>
+          <small *ngIf="!validateLanguageCode()"
+                 style="color: red;"
+          >{{ 'user.form.requiredField' | translate }}</small>
+        </div>
+        <!-- - - - LOADING PROCESS: language code - - - -->
+        <div *ngIf="!userOptions.hideLanguageCode() && !dataLoaded"
+             [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+        >
+          <label>{{ "user.form.languageCode" | translate }}</label>
+          <p-skeleton [class]="mobileStyle ? 'field col-12': 'field col-12 sm:col-6  md:col-3'"
+                      width="100%"
+                      height="2.5rem"
+                      styleClass="mb-2"
+          ></p-skeleton>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>

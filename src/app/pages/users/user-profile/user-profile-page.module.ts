@@ -33,45 +33,46 @@ import {ScrollPanelModule} from "primeng/scrollpanel";
 import {ChipModule} from "primeng/chip";
 
 @NgModule({
-    declarations: [
-        UserProfilePageComponent,
-    ],
-    imports: [
-        CommonModule,
-        MatIconModule,
-        OverlayPanelModule,
-        TranslateModule,
-        CardModule,
-        ButtonModule,
-        DividerModule,
-        InputTextModule,
-        ImageModule,
-        PasswordModule,
-        FormsModule,
-        InputMaskModule,
-        SharedModule,
-        CheckboxModule,
-        ReactiveFormsModule,
-        DropdownModule,
-        ProgressBarModule,
-        RippleModule,
-        RouterModule,
-        ToastModule,
-        AccordionModule,
-        MultiSelectModule,
-        SkeletonModule,
-        FileUploadModule,
-        StepsModule,
-        FieldsetModule,
-        TableModule,
-        TagModule,
-        AvatarModule,
-        BadgeModule,
-        ScrollPanelModule,
-        ChipModule
-    ],
-    exports: [
-        UserProfilePageComponent
-    ]
+  declarations: [
+    UserProfilePageComponent,
+  ],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    OverlayPanelModule,
+    TranslateModule,
+    CardModule,
+    ButtonModule,
+    DividerModule,
+    InputTextModule,
+    ImageModule,
+    PasswordModule,
+    FormsModule,
+    InputMaskModule,
+    SharedModule,
+    CheckboxModule,
+    ReactiveFormsModule,
+    DropdownModule,
+    ProgressBarModule,
+    RippleModule,
+    RouterModule,
+    ToastModule,
+    AccordionModule,
+    MultiSelectModule,
+    SkeletonModule,
+    FileUploadModule,
+    StepsModule,
+    FieldsetModule,
+    TableModule,
+    TagModule,
+    AvatarModule,
+    BadgeModule,
+    ScrollPanelModule,
+    ChipModule
+  ],
+  exports: [
+    UserProfilePageComponent
+  ]
 })
-export class UserProfilePageModule {}
+export class UserProfilePageModule {
+}

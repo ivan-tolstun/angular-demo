@@ -105,12 +105,13 @@ export class UserClientService {
     const roles = user?.roles as Array<any>
     return UserDtoV1.builder()
       .email(user.email)
+      .emailVerified(user.email_verified)
       .roles(roles
         ?.map(role => ObjectExtension.stringToEnum(UserRoleDtoV1, role)!!)
         ?.filter(role => role != null)
       )
-      .firstName(user?.firstName)
-      .lastName(user?.lastName)
+      .firstName(user?.given_name)
+      .lastName(user?.family_name)
       .languageCode(
         (user.languageCode != null)
           ? ObjectExtension.stringToEnum(LanguageDto, user.languageCode)

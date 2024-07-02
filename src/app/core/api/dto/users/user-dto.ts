@@ -8,6 +8,7 @@ export class UserDtoV1 {
     }
 
     email: string | undefined
+    emailVerified: boolean = false
     status: UserStatusDtoV1 | undefined
     roles: Array<UserRoleDtoV1> | undefined
     firstName: string | undefined

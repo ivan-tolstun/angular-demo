@@ -6,6 +6,7 @@ import {StaticImagePath} from "../../../../core/constants/static-image-path";
 import {TranslateService} from "@ngx-translate/core";
 import {DomSanitizer} from "@angular/platform-browser";
 import {KeycloakService} from "keycloak-angular";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main-sidebar-menu',
@@ -23,9 +24,10 @@ export class MainSidebarMenuComponent implements OnInit {
   protected settingsSubmenuItems: MenuItem[] = []
   protected languageSubmenuItems: MenuItem[] = []
 
-  constructor(private readonly domSanitizer: DomSanitizer,
+  constructor(private readonly router: Router,
+              private readonly domSanitizer: DomSanitizer,
               private readonly translateService: TranslateService,
-              private readonly KeycloakService: KeycloakService) {
+              private readonly keycloakService: KeycloakService) {
   }
 
   ngOnInit(): void {
@@ -41,50 +43,52 @@ export class MainSidebarMenuComponent implements OnInit {
   }
 
   private initMainSubmenuWithCurrentLanguage(): void {
-    const mainSubmenu: Array<MenuItem> = []
     const fistPageLink = {
       label: this.translateService.instant("mainLayout.sidebarMenu.linkToFistPage"),
       icon: "pi pi-fw pi-apartment-light",
       command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ },
       routerLinkActiveOptions: {exact: true},
     }
-    mainSubmenu.push(fistPageLink)
     const secondPageLink = {
       label: this.translateService.instant("mainLayout.sidebarMenu.linkToSecondPage"),
       icon: "pi pi-fw pi-smb-share-light",
       command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ },
       routerLinkActiveOptions: {exact: true}
     }
-    mainSubmenu.push(secondPageLink)
-    this.mainSubmenuItems = mainSubmenu
+    this.mainSubmenuItems = [fistPageLink, secondPageLink]
   }
 
   private initSettingsSubmenuWithCurrentLanguage(): void {
-    const settingsSubmenu: Array<MenuItem> = []
     const languageLink = {
       label: this.translateService.instant("mainLayout.sidebarMenu.language"),
       icon: "pi pi-fw pi-language-light",
-      command: () => { this.languageSubmenu?.toggle(true) }
+      command: () => { this.languageSubmenu?.toggle(true) },
+      disabled: false,
+      visible: true
     }
     const logoutLink = {
       label: this.translateService.instant("mainLayout.sidebarMenu.logout"),
       icon: "pi pi-fw pi-logout-light",
-      command: () => { this.KeycloakService.logout() },
+      command: () => { this.keycloakService.logout() },
       routerLinkActiveOptions: {exact: true},
+      disabled: false,
+      visible: true
     }
-    settingsSubmenu.push(
-      {
-        label: this.translateService.instant("mainLayout.sidebarMenu.linkToCurrentUser"),
-        icon: "pi pi-fw pi-account-circle-light",
-        command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ }
-      },
-      {
-        label: this.translateService.instant("mainLayout.sidebarMenu.linkToAuthorizationSettings"),
-        icon: "pi pi-fw pi-shield-person-light",
-        command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ }
-      },
-      languageLink, logoutLink)
-    this.settingsSubmenuItems = settingsSubmenu
+    const userProfileLink = {
+      label: this.translateService.instant("mainLayout.sidebarMenu.linkToCurrentUser"),
+      icon: "pi pi-fw pi-account-circle-light",
+      command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */  },
+      disabled: false,
+      visible: true
+    }
+    const authorizationSettingsLink = {
+      label: this.translateService.instant("mainLayout.sidebarMenu.linkToAuthorizationSettings"),
+      icon: "pi pi-fw pi-shield-person-light",
+      command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ },
+      disabled: false,
+      visible: true
+    }
+    this.settingsSubmenuItems = [userProfileLink, authorizationSettingsLink, languageLink, logoutLink]
   }
 
   private initLanguageSubmenuWithCurrentLanguage(): void {

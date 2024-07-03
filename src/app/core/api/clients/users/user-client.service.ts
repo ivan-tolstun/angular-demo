@@ -32,10 +32,10 @@ export class UserClientService {
       .get<any>(encodeURI(path), {headers: headers})
       .pipe(
         map((user: any) => this.toUserDto(user)),
-        catchError(error => {
-          this.globalMessageService.showError('User access error', error.message ?? error)
-          return throwError(error);
-        })
+        // catchError(error => {
+        //   this.globalMessageService.showError('User access error', error.message ?? error)
+        //   return throwError(error);
+        // })
       )
   }
 
@@ -46,10 +46,10 @@ export class UserClientService {
       .get<Array<any>>(encodeURI(path), {headers: headers})
       .pipe(
         map(users => users.map((user: any) => this.toUserDto(user)),
-          catchError(error => {
-            this.globalMessageService.showError('User access error', error.message ?? error)
-            return throwError(error);
-          })
+          // catchError(error => {
+          //   this.globalMessageService.showError('User access error', error.message ?? error)
+          //   return throwError(error);
+          // })
         ))
   }
 
@@ -66,10 +66,10 @@ export class UserClientService {
       .put<any>(encodeURI(path), cmd, {headers: headers})
       .pipe(
         map((user: any) => this.toUserDto(user)),
-        catchError(error => {
-          this.globalMessageService.showError('User access error', error.message ?? error)
-          return throwError(error);
-        })
+        // catchError(error => {
+        //   this.globalMessageService.showError('User access error', error.message ?? error)
+        //   return throwError(error);
+        // })
       )
   }
 
@@ -80,10 +80,10 @@ export class UserClientService {
       .patch<any>(encodeURI(path), cmd, {headers: headers})
       .pipe(
         map((user: any) => this.toUserDto(user)),
-        catchError(error => {
-          this.globalMessageService.showError('User access error', error.message ?? error)
-          return throwError(error);
-        })
+        // catchError(error => {
+        //   this.globalMessageService.showError('User access error', error.message ?? error)
+        //   return throwError(error);
+        // })
       )
   }
 
@@ -94,10 +94,10 @@ export class UserClientService {
       .delete<boolean>(encodeURI(path), {headers: headers})
       .pipe(
         map((user: any) => this.toUserDto(user)),
-        catchError(error => {
-          this.globalMessageService.showError('User access error', error.message ?? error)
-          return throwError(error);
-        })
+        // catchError(error => {
+        //   this.globalMessageService.showError('User access error', error.message ?? error)
+        //   return throwError(error);
+        // })
       )
   }
 

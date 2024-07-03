@@ -82,7 +82,6 @@ export class UserFormComponent implements OnInit {
     this.emailChange.emit(value)
     this.validate()
   }
-
   public get email(): string | undefined {
     return this._email
   }
@@ -92,7 +91,6 @@ export class UserFormComponent implements OnInit {
     this._confirmEmail = value
     this.validate()
   }
-
   get confirmEmail(): string | undefined {
     return this._confirmEmail
   }
@@ -104,7 +102,6 @@ export class UserFormComponent implements OnInit {
     this.statusChange.emit(value)
     this.validate()
   }
-
   public get status(): UserStatusDtoV1 | undefined {
     return this._status
   }
@@ -116,7 +113,6 @@ export class UserFormComponent implements OnInit {
     this.rolesChange.emit(value)
     this.validate()
   }
-
   public get roles(): Array<UserRoleDtoV1> | undefined {
     return this._roles
   }
@@ -128,7 +124,6 @@ export class UserFormComponent implements OnInit {
     this.firstNameChange.emit(value)
     this.validate()
   }
-
   public get firstName(): string | undefined {
     return this._firstName
   }
@@ -140,7 +135,6 @@ export class UserFormComponent implements OnInit {
     this.lastNameChange.emit(value)
     this.validate()
   }
-
   public get lastName(): string | undefined {
     return this._lastName
   }
@@ -152,7 +146,6 @@ export class UserFormComponent implements OnInit {
     this.languageCodeChange.emit(value)
     this.validate()
   }
-
   public get languageCode(): LanguageDto | undefined {
     return this._languageCode
   }
@@ -162,7 +155,6 @@ export class UserFormComponent implements OnInit {
     if (value == null || ObjectExtension.deepEqual(value, this._userOptions)) return
     this._userOptions = value
   }
-
   public get userOptions(): UserFormOptions {
     return this._userOptions
   }

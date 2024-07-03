@@ -33,7 +33,7 @@ export function initializeKeycloak(keycloak: KeycloakService) {
           keycloak.keycloakEvents$.subscribe({
             next: (event) => {
               // Set up automatic token refresh
-              if (event.type.toString() === "OnTokenExpired")
+              if (event.type == 6)
                 keycloak.updateToken(30).catch(() => { keycloak.login() })
             }
           })

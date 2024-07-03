@@ -19,7 +19,7 @@ export class CustomKeycloakAuthGuard extends KeycloakAuthGuard {
     if (!this.authenticated) {
       await this.keycloak.login({
         redirectUri: window.location.origin + state.url
-      });
+      })
     }
     // Allow the user to proceed if all the required roles are present.
     return this.authenticated

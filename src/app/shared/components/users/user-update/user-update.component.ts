@@ -12,6 +12,8 @@ import {UserFormOptions} from "../user-form/models/user-form-options";
 import {TranslateService} from "@ngx-translate/core";
 import {GlobalMessageService} from "../../../../core/services/global-message-service";
 import {UserClientService} from "../../../../core/api/clients/users/user-client.service";
+import {catchError} from "rxjs/operators";
+import {throwError} from "rxjs";
 
 @Component({
   selector: 'app-user-update',
@@ -70,7 +72,6 @@ export class UserUpdateComponent implements OnInit {
     this.lastName = this._user.lastName
     this.languageCode = this._user.languageCode
   }
-
   public get user(): UserDtoV1 {
     return this._user
   }
@@ -80,7 +81,6 @@ export class UserUpdateComponent implements OnInit {
     if (value == null || ObjectExtension.deepEqual(value, this._userOptions)) return
     this._userOptions = value
   }
-
   public get userOptions(): UserFormOptions {
     return this._userOptions
   }
@@ -126,18 +126,21 @@ export class UserUpdateComponent implements OnInit {
     this.dataLoaded = false
     this.userService
       .updateUser(updateUserCmd)
+      .pipe(
+        catchError(error => {
+          this.dataLoaded = true
+          this.globalMessageService.showError(
+            'portal.user.update.userUpdateError', error.message ?? error)
+          this.whenUpdateFailed.emit()
+          return throwError(error);
+        })
+      )
       .subscribe(
         (user: UserDtoV1) => {
           this.dataLoaded = true
           this.globalMessageService.showInfo(
             undefined, "portal.user.update.userUpdatedSuccessfully")
           this.whenUpdated.emit(user)
-        },
-        (error: any) => {
-          this.dataLoaded = true
-          this.globalMessageService.showError(
-            'portal.user.update.userUpdateError', error.message ?? error)
-          this.whenUpdateFailed.emit()
         }
       )
   }

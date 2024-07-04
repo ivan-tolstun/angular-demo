@@ -9,6 +9,7 @@ import {GlobalMessageService} from "./core/services/global-message-service";
   styleUrls: ['./app.component.scss'],
   providers: [MessageService]
 })
+
 export class AppComponent implements OnInit {
 
   protected readonly globalToastKey = "global-toast"

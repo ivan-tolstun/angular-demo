@@ -51,6 +51,7 @@ export class UserProfilePageComponent implements OnInit {
       .requiredStatus(signal(false))
       .hideStatus(signal(true))
       .build()
+    this.updateOptions.requiredRoles.set(false)
   }
 
 }

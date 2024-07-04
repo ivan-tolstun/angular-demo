@@ -48,12 +48,16 @@ export class MainSidebarMenuComponent implements OnInit {
       icon: "pi pi-fw pi-apartment-light",
       command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ },
       routerLinkActiveOptions: {exact: true},
+      disabled: true,
+      visible: true
     }
     const secondPageLink = {
       label: this.translateService.instant("mainLayout.sidebarMenu.linkToSecondPage"),
       icon: "pi pi-fw pi-smb-share-light",
       command: ($event: MenuItemCommandEvent) => { /* TODO: navigateTo */ },
-      routerLinkActiveOptions: {exact: true}
+      routerLinkActiveOptions: {exact: true},
+      disabled: true,
+      visible: true
     }
     this.mainSubmenuItems = [fistPageLink, secondPageLink]
   }

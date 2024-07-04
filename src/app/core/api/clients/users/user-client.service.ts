@@ -9,7 +9,7 @@ import {
   CreateUserCmdV1, DeleteUserCmdV1,
   GetUserCmdV1,
   GetUsersCmdV1, UpdateUserCmdV1
-} from "../../cmd/users/user-cmd";
+} from "../../command/users/user-cmd";
 import {ObjectExtension} from "../../../util/object-extension";
 import {LanguageDto} from "../../dto/common/language-dto";
 import {GlobalMessageService} from "../../../services/global-message-service";
@@ -25,11 +25,10 @@ export class UserClientService {
   }
 
   public findUser(cmd: GetUserCmdV1): Observable<UserDtoV1> {
-
     const path: string = `/realms/${keycloakConfig.realm}/protocol/openid-connect/userinfo`
     const headers = new HttpHeaders().set('Content-Type', 'application/json')
     return this.http
-      .get<any>(encodeURI(path), {headers: headers})
+      .post<any>(encodeURI(path), cmd, {headers: headers})
       .pipe(
         map((user: any) => this.toUserDto(user)),
         // catchError(error => {

@@ -7,7 +7,7 @@ import {ObjectExtension} from "../../../../core/util/object-extension";
 import {
   GetUserCmdV1,
   UpdateUserCmdV1
-} from "../../../../core/api/cmd/users/user-cmd";
+} from "../../../../core/api/command/users/user-cmd";
 import {UserFormOptions} from "../user-form/models/user-form-options";
 import {TranslateService} from "@ngx-translate/core";
 import {GlobalMessageService} from "../../../../core/services/global-message-service";
@@ -21,7 +21,7 @@ import {throwError} from "rxjs";
   styleUrls: ['./user-update.component.scss'],
   providers: [MessageService]
 })
-export class UserUpdateComponent implements OnInit {
+export class UserUpdateComponent implements OnInit  {
 
   @Input()
   public mobileStyle: boolean = false

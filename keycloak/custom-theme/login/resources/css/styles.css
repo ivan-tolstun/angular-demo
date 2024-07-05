@@ -1,0 +1,58 @@
+.login-pf body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    align-content: space-between;
+    height: 100vh;
+}
+
+.login-pf-page {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    align-content: space-between;
+}
+
+.login-pf-page .login-pf-page-header {
+    margin-bottom: 40px;
+    width: 90%;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ebecedb8;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+
+@media (min-width: 768px) {
+    .login-pf-page .login-pf-page-header {
+      margin-bottom: 40px;
+      width: auto;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: #ebecedb8;
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 0.1rem 9rem 0.1rem 9rem;
+    }
+}
+
+.login-pf-page .card-pf {
+    padding: 2rem 4rem 2rem 4rem;
+    width: 90%;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .login-pf-page .card-pf {
+      padding: 2rem 4rem 2rem 4rem;
+      width: max-content;
+      border-radius: 10px;
+    }
+}

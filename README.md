@@ -223,14 +223,28 @@ import { AppComponent } from './app.component';
 import { keycloakConfig } from './keycloak.config';
 
 function initializeKeycloak(keycloak: KeycloakService) {
-  return () => 
-    keycloak.init({
-      config: keycloakConfig,
-      initOptions: {
-        onLoad: 'login-required',
-        checkLoginIframe: false
-      }
-    });
+  return () =>
+    keycloak
+      .init({
+        config: keycloakConfig,
+        initOptions: {
+          onLoad: 'login-required',
+          checkLoginIframe: false
+        },
+        // Specify URLs that don't require tokens
+        bearerExcludedUrls: []
+      })
+      .then(authenticated => {
+        if (authenticated) {
+          keycloak.keycloakEvents$.subscribe({
+            next: (event) => {
+              // Set up automatic token refresh
+              if (event.type == 6)
+                keycloak.updateToken(30).catch(() => { keycloak.login() })
+            }
+          })
+        }
+      })
 }
 
 @NgModule({
